@@ -7,7 +7,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
     Students.getAll()
         .then(students => {
-            res.json(students);
+            res.status(200).json(students);
         })
         .catch(err => {
             res.status(500).json({ message: 'Failed to get student list' });
@@ -32,9 +32,6 @@ router.get('/:id', (req, res) => {
             res.status(500).json({ message: 'Failed to get students' });
         });
 });
-
-
-
 
 
 
@@ -64,28 +61,4 @@ router.delete("/:id", (req, res) => {
 });
 
 module.exports = router;
-
-
-
-// router.delete("/:id", (req, res) => {
-//     const { id } = req.params;
-//     db("cars")
-//         .where({ id })
-//         .del()
-//         .then(count => {
-//             if (count > 0) {
-//                 res.status(200).json({ message: "car deleted successfully" });
-//             } else {
-//                 res.status(404).json({ message: "No car with that ID was found" });
-//             }
-//         })
-//         .catch(error => {
-//             console.log("GET / error", error);
-//             res.status(500).json({ message: error.message });
-//         });
-// });
-
-
-
-/////////////////CLEANER SEED
 

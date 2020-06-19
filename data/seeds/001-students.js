@@ -6,6 +6,8 @@ exports.seed = function (knex) {
     { name: "Hermione Granger", house: "Gryffindor", year: 6 },
     { name: "Ronald Weasley", house: "Gryffindor", year: 6 },
     { name: "Draco Malfoy", house: "Slytherin", year: 6 },
+    { name: "Cho Chang", house: "Ravenclaw", year: 7 },
+
 
 
   ]);

@@ -21,6 +21,7 @@ function remove(id) {
         .where('id', Number(id))
         .del();
 }
+
 function getAll() {
     return db("students");
 }
